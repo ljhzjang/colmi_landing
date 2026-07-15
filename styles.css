@@ -138,6 +138,96 @@ body {
   --asset-width: 100%;
 }
 
+.waitlist {
+  width: min(100%, 680px);
+  margin: 64px auto 0;
+  padding: clamp(28px, 5vw, 48px);
+  color: #e2e5f1;
+  text-align: center;
+  background: #111729;
+  border: 1px solid #ffd600;
+  box-shadow: 0 0 28px rgb(139 44 255 / 26%);
+}
+
+.waitlist__eyebrow {
+  margin: 0 0 8px;
+  color: #d6adff;
+  font-family: "Geist", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.waitlist h2 {
+  margin: 0;
+  color: #ffd600;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 600;
+}
+
+.waitlist__description {
+  margin: 12px 0 24px;
+  color: #c2b9d0;
+}
+
+.waitlist__form {
+  display: flex;
+  gap: 10px;
+}
+
+.waitlist__form input,
+.waitlist__form button {
+  min-height: 52px;
+  border: 0;
+  font: inherit;
+}
+
+.waitlist__form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 16px;
+  color: #fff;
+  background: #080c19;
+  border: 1px solid #6e6282;
+  outline: none;
+}
+
+.waitlist__form input:focus {
+  border-color: #d6adff;
+  box-shadow: 0 0 0 3px rgb(139 44 255 / 25%);
+}
+
+.waitlist__form button {
+  padding: 0 22px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(90deg, #962cf2, #6500a4);
+}
+
+.waitlist__form button:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+.waitlist__form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.waitlist__message {
+  min-height: 1.5em;
+  margin: 16px 0 0;
+  font-weight: 600;
+}
+
+.waitlist__message[data-type="success"] {
+  color: #4de879;
+}
+
+.waitlist__message[data-type="error"] {
+  color: #ffb0b0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -162,6 +252,14 @@ body {
 
   .screen {
     width: 100%;
+  }
+
+  .waitlist {
+    margin-top: 40px;
+  }
+
+  .waitlist__form {
+    flex-direction: column;
   }
 }
 
