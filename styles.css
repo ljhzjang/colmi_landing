@@ -48,27 +48,30 @@ body {
 }
 
 body {
-  overflow-x: auto;
+  overflow-x: hidden;
   background: #fff;
 }
 
 .design-board {
-  min-width: max-content;
-  min-height: 1261px;
-  padding: 155px 285px 92px 225px;
+  width: min(100%, 1440px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 64px clamp(24px, 5vw, 72px) 80px;
 }
 
 .screen-row {
-  display: flex;
-  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 390px));
+  justify-content: center;
+  width: 100%;
   align-items: flex-start;
-  gap: 32px;
+  gap: clamp(24px, 3vw, 48px);
 }
 
 .screen {
-  width: 390px;
+  width: 100%;
+  min-width: 0;
   margin: 0;
-  flex: 0 0 390px;
 }
 
 .screen img {
@@ -148,24 +151,17 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-    scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
-  }
-
   .design-board {
-    min-height: 100vh;
-    padding: 24px 20px 48px;
+    padding: 32px 24px 56px;
   }
 
   .screen-row {
-    gap: 16px;
+    grid-template-columns: minmax(0, 390px);
+    gap: 32px;
   }
 
   .screen {
-    width: min(82vw, 390px);
-    flex-basis: min(82vw, 390px);
-    scroll-snap-align: start;
+    width: 100%;
   }
 }
 
