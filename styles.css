@@ -79,24 +79,22 @@ body {
   background: #020713;
 }
 
-.landing-board img {
+.landing-board__image {
+  position: relative;
   display: block;
   width: auto;
   max-width: 100%;
   height: 92%;
-  max-height: 100%;
-  object-fit: contain;
+  aspect-ratio: 2 / 3;
 }
 
-.landing-board::after {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 46%;
-  height: 4%;
-  content: "";
-  background: #020713;
-  transform: translateX(-50%);
+.landing-board img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .waitlist {
@@ -234,6 +232,12 @@ body {
   .landing-board img {
     width: 100%;
     height: auto;
+  }
+
+  .landing-board__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
   }
 
   .waitlist {
