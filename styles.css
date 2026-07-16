@@ -124,6 +124,11 @@ body {
   letter-spacing: 0.14em;
 }
 
+.waitlist__content {
+  width: 100%;
+  transform: translateY(-96px);
+}
+
 .waitlist h2 {
   margin: 0;
   color: #ffd600;
@@ -230,6 +235,10 @@ body {
     min-height: 460px;
     border-top: 1px solid rgb(255 214 0 / 45%);
     border-left: 0;
+  }
+
+  .waitlist__content {
+    transform: none;
   }
 }
 
