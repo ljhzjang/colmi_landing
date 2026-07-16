@@ -62,9 +62,9 @@ body {
 
 .landing-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.6fr);
+  grid-template-columns: minmax(0, 1fr) minmax(430px, 1fr);
+  height: min(calc(100vh - clamp(36px, 4vw, 80px)), 56.25vw);
   aspect-ratio: 16 / 9;
-  max-height: calc(100vh - clamp(36px, 4vw, 80px));
   overflow: hidden;
   background: #030813;
 }
@@ -83,7 +83,8 @@ body {
   display: block;
   width: auto;
   max-width: 100%;
-  height: 100%;
+  height: 92%;
+  max-height: 100%;
   object-fit: contain;
 }
 
@@ -125,15 +126,18 @@ body {
 }
 
 .waitlist__content {
-  width: 100%;
-  transform: translateY(-96px);
+  width: min(100%, 440px);
+  text-align: center;
+  transform: none;
 }
 
 .waitlist h2 {
   margin: 0;
   color: #ffd600;
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-size: clamp(2rem, 3vw, 3.1rem);
   font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .waitlist__description {
@@ -145,12 +149,13 @@ body {
   display: flex;
   flex-direction: column;
   width: min(100%, 360px);
+  margin-inline: auto;
   gap: 10px;
 }
 
 .waitlist__form input,
 .waitlist__form button {
-  min-height: 52px;
+  min-height: 60px;
   border: 0;
   font: inherit;
 }
@@ -171,10 +176,10 @@ body {
 }
 
 .waitlist__form button {
-  min-height: 68px;
+  min-height: 78px;
   padding: 0 22px;
   color: #fff;
-  font-size: 1.12rem;
+  font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
   background: linear-gradient(90deg, #962cf2, #6500a4);
@@ -222,8 +227,8 @@ body {
 
   .landing-layout {
     grid-template-columns: 1fr;
+    height: auto;
     aspect-ratio: auto;
-    max-height: none;
   }
 
   .landing-board img {
